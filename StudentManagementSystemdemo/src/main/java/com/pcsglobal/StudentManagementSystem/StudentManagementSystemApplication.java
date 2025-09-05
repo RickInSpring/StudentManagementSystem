@@ -1,4 +1,4 @@
-package pcsglobalcom.example.StudentManagementSystemdemo;
+package com.pcsglobal.StudentManagementSystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
