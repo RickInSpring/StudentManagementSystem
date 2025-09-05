@@ -18,10 +18,11 @@ public class Student {
     private String phone;
     private String gender;
 
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "guardian_id")
     private Guardian guardian;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "address_id")
     private Address address;
-
 }

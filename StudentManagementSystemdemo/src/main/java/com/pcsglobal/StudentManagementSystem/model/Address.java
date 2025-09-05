@@ -1,6 +1,7 @@
 package com.pcsglobal.StudentManagementSystem.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String addressId;
+    private Long addressId;
     private String street;
     private String city;
     private String state;
@@ -21,5 +22,6 @@ public class Address {
     private String pinCode;
 
     @OneToOne(mappedBy = "address")
+    @JsonIgnore
     private Student student;
 }
